@@ -1,82 +1,61 @@
 // Dom manipulation
 
-// 2nd section - styling element
+// Traverse the DOM
 
-const title = document.querySelector("#main-heading");
+// Parent Node Traversal
+console.log("____________");
 
-// it adds the color property as an inline style
-title.style.color = "yellow";
+let element = document.querySelector("ul");
 
-console.log(title);
+console.log(element);
 
-const listItems = document.querySelectorAll(".list-items");
+// get the parent element
+console.log(element.parentElement);
 
+// get the grandparent element
+console.log(element.parentElement.parentElement);
 
-for (let i = 0; i < listItems.length; i++) {
-    listItems[i].style.fontSize = "1.5em";
-}
-console.log(listItems);
+// get the parent node
+console.log(element.parentNode);
 
-// 3rd section - Creating Elements
-const ul = document.querySelector("ul");
+// get the grandparent node
+console.log(element.parentNode.parentNode);
 
-const newElement = document.createElement("li")
+const htmlElement = document.documentElement;
 
-newElement.style.fontSize = "1.5rem";
+console.log(htmlElement.parentNode);
+console.log(htmlElement.parentElement)
 
-ul.append(newElement);
+// Child Node Traversal
+console.log("____________");
 
-// 4th section - Modify text
+let newElement = document.querySelector("ul");
 
-const firstListItem = document.querySelector(".list-items");
+console.log(newElement.childNodes);
+console.log(newElement.childNodes[0]);
+console.log(newElement.childElementCount);
+console.log(newElement.firstChild);
+console.log(newElement.lastChild);
 
-// text only
-console.log(firstListItem.innerText);
+newElement.childNodes[1].style.color = "red";
 
-// display same as in html
-console.log(firstListItem.textContent);
+console.log(newElement.children);
+console.log(newElement.firstElementChild);
+console.log(newElement.lastElementChild);
 
-// display same as in html but with tags
-// there are security issues regarding using innerHTML as you don't want user input to be displayed in the inner html because it allows the user to control the javascript and html on the web page 
-// most cases you gonna user innerText
-console.log(firstListItem.innerHTML);
-
-newElement.innerText = "X-men";
-
-// 5th section - modify elements attributes and classes
-
-// how we deal with attributes [id]
-newElement.setAttribute("id", "main-heading");
-
-newElement.style.backgroundColor = "grey";
-
-newElement.removeAttribute("id");
-
-console.log(title.getAttribute("id"));
-
-// how we deal with attributes [classes]
-
-// newElement.setAttribute("class", "list-items");
-
-newElement.classList.add("list-items");
-
-newElement.classList.add("list-new");
-
-newElement.classList.remove("list-new");
-
-console.log(newElement.classList.contains("list-items"));
-
-// Remove element
-
-const newElement2 = document.createElement("h2");
-
-newElement2.innerText = "Hello";
-
-newElement2.style.color = "yellow";
-
-newElement2.style.fontSize = "2rem";
+// Sibling Node Traversal
+// element that are on the same level like h1, hr and ul
+console.log("____________");
 
 
-ul.append(newElement2);
+const newestElement = document.querySelector("ul");
 
-newElement2.remove();
+const divElement = document.querySelector("div");
+
+console.log(divElement.children);
+
+console.log(newestElement.previousSibling);
+console.log(newestElement.previousElementSibling);
+console.log(newestElement.nextSibling);
+console.log(newestElement.nextElementSibling);
+
