@@ -1,26 +1,30 @@
 // Dom manipulation
 
-// getElementById()
-const title = document.getElementById('main-heading');
+// 2nd session - styling element
+
+const title = document.querySelector("#main-heading");
+
+// it adds the color property as an inline style
+title.style.color = "yellow";
+
 console.log(title);
 
-// getElementByClassName()
-const listItems = document.getElementsByClassName("list-items");
+const listItems = document.querySelectorAll(".list-items");
+
+
+for (let i = 0; i < listItems.length; i++) {
+    listItems[i].style.fontSize = "1.5em";
+}
 console.log(listItems);
-console.log(listItems[0]);
 
-// getElementByTagName()
-const tagItem = document.getElementsByTagName("li");
-console.log(tagItem);
-console.log(tagItem[0]);
+// 3rd session - Creating Elements
+const ul = document.querySelector("ul");
 
-// querySelector()
-// selects first div
-const container = document.querySelector("div");
-console.log(container);
+const newElement = document.createElement("li")
 
-// querySelectorAll()
+newElement.style.color = "black";
 
-const containers = document.querySelectorAll("li");
-console.log(containers);
-console.log(containers[0]);
+ul.append(newElement);
+
+// 4 session - Modify text
+
