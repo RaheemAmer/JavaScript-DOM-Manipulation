@@ -1,0 +1,42 @@
+* {
+    background-color: rgb(42, 82, 82);
+    color: white;
+    text-align: center;
+}
+
+.main-heading {
+    padding: 50px 0px;
+    font-size: 2.5em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    margin: auto;
+}
+
+.card-layout {
+    padding: 50px 0px;
+    border: 3px solid white;
+    border-radius: 18px;
+}
+
+
+.cards h2 {
+    padding: 20px 40px 60px 40px;
+    font-weight: 900;
+    font-size: 1.8em;
+
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
